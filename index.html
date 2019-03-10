@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+    pre code {
+        background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        padding: 1px;
+        width: 700px;
+    }
+    strong {
+        color: red;
+    }
+    iframe {
+        width: 320;
+        height: 180;
+    }
+    </style>
+
+    <h1>Note for imbedding a youtube video</h1>
+
+    <hr>
+    <!------------------------------------------------------------------------>
+
+    <h2>Method 0 - It works - Fluid and Center</h2>
+
+    <pre>
+        <code>
+    <strong>&lt;style&gt;
+    .video-wrapper {
+	    position: relative;
+	    padding-bottom: 40%;
+	    padding-top: 0px;
+	    height: 0;
+    }
+    .video-wrapper iframe {
+	    position: absolute;
+	    top: 0;
+	    left: 15%;
+	    width: 70%;
+	    height: 100%;
+    }
+    &lt;/style&gt;
+
+    &lt;div class="video-wrapper"&gt;</strong>
+        &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"&gt;
+            &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+        &lt;/iframe&gt;
+    <strong>&lt;/div&gt;</strong>
+        </code>
+    </pre>
+
+    <style>
+    .videoWrapper {
+	    position: relative;
+	    padding-bottom: 40%;
+	    padding-top: 0px;
+	    height: 0;
+    }
+    .videoWrapper iframe {
+	    position: absolute;
+	    top: 0;
+	    left: 15%;
+	    width: 70%;
+	    height: 100%;
+    }
+    </style>
+
+    <div class="videoWrapper">
+        <iframe src="https://www.youtube.com/embed/5RoteWQYHp8">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+    </div>
+
+    <ul>
+        <li>Reference: <a href="https://stackoverflow.com/a/26346689/3811484" target="_blank" rel="noopener">https://stackoverflow.com/a/26346689/3811484</a></li>
+    </ul>
+
+    <hr>
+    <!------------------------------------------------------------------------>
+
+    <h2>Method 1 - It works - Most Recommended</h2>
+
+    <pre>
+        <code>
+    &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            <strong>style="display: block"</strong>&gt;
+        &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+    &lt;/iframe&gt;
+        </code>
+    </pre>
+
+    <iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            style="display: block">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <pre>
+        <code>
+    &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            <strong>style="display: block; margin: auto"</strong>&gt;
+        &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+    &lt;/iframe&gt;
+        </code>
+    </pre>
+
+    <iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            style="display: block; margin: auto">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <ul>
+        <li>Reference: <a href="https://stackoverflow.com/a/8366972/3811484" target="_blank" rel="noopener">https://stackoverflow.com/a/8366972/3811484</a></li>
+    </ul>
+
+    <hr>
+    <!------------------------------------------------------------------------>
+
+    <h2>Method 2 - It works - deprecated, not supported in HTML5</h2>
+
+    <pre>
+        <code>
+    &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            <strong>align="center"</strong>&gt;
+        &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+    &lt;/iframe&gt;
+        </code>
+    </pre>
+
+    <iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            align="center">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <pre>
+        <code>
+    <strong>&lt;p align="center"&gt;</strong>
+        &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"&gt;
+            &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+        &lt;/iframe&gt;
+    <strong>&lt;/p&gt;</strong>
+        </code>
+    </pre>
+
+    <p align="center">
+        <iframe src="https://www.youtube.com/embed/5RoteWQYHp8">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+    </p>
+
+    Reference:
+    <ul>
+        <li><a href="https://stackoverflow.com/a/33720705/3811484" target="_blank" rel="noopener">https://stackoverflow.com/a/33720705/3811484</a></li>
+        <li><a href="https://www.w3schools.com/tags/tag_iframe.asp" target="_blank" rel="noopener">Not supported in HTML5</a></li>
+    </ul>
+
+    <hr>
+    <!------------------------------------------------------------------------>
+
+    <h2>Method 3 - Works somehow - don't know if deprecated</h2>
+
+    <pre>
+        <code>
+    &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            <strong>style="text-align: center"&gt;</strong>
+        &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+    &lt;/iframe&gt;
+        </code>
+    </pre>
+
+    <iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            style="text-align: center">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <pre>
+        <code>
+    &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            <strong>style="text-align: center; margin: auto"&gt;</strong>
+        &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+    &lt;/iframe&gt;
+        </code>
+    </pre>
+
+    <iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            style="text-align: center; margin: auto">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <pre>
+        <code>
+    <strong>&lt;p style="text-align: center"&gt;</strong>
+        &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"&gt;
+            &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+        &lt;/iframe&gt;
+    <strong>&lt;/p&gt;</strong>
+        </code>
+    </pre>
+
+    <p style="text-align: center">
+        <iframe src="https://www.youtube.com/embed/5RoteWQYHp8">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+    </p>
+
+    Reference: 
+    <ul>
+        <li><a href="https://stackoverflow.com/questions/8366957/how-to-center-an-iframe-horizontally/8366972#comment35538821_8366972" target="_blank" rel="noopener">https://stackoverflow.com/questions/8366957/how-to-center-an-iframe-horizontally/8366972#comment35538821_8366972</a></li>
+        <li><a href="https://stackoverflow.com/a/50013869/3811484" target="_blank" rel="noopener">https://stackoverflow.com/a/50013869/3811484</a></li>
+        <li><a href="https://stackoverflow.com/questions/8366957/how-to-center-an-iframe-horizontally/8366972#comment58900330_33720705" target="_blank" rel="noopener">Seems not deprecated.</a></li>
+    </ul>
+    
+    <hr>
+    <!------------------------------------------------------------------------>
+
+    <h2>Method 4 - It doesn't work.</h2>
+
+    <pre>
+        <code>
+    &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            <strong>style="float: middle"&gt;</strong>
+        &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+    &lt;/iframe&gt;
+        </code>
+    </pre>
+
+    <iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            style="float: middle">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <pre>
+        <code>
+    &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            <strong>style="float: middle; margin: auto"&gt;</strong>
+        &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+    &lt;/iframe&gt;
+        </code>
+    </pre>
+
+    <iframe src="https://www.youtube.com/embed/5RoteWQYHp8"
+            style="float: middle; margin: auto">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <pre>
+        <code>
+    <strong>&lt;p style="float: middle"&gt;</strong>
+        &lt;iframe src="https://www.youtube.com/embed/5RoteWQYHp8"&gt;
+            &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+        &lt;/iframe&gt;
+    <strong>&lt;/p&gt;</strong>
+        </code>
+    </pre>
+
+    <p style="float: middle">
+        <iframe src="https://www.youtube.com/embed/5RoteWQYHp8">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+    </p>
+
+    <ul>
+        <li>Reference: <a href="https://stackoverflow.com/a/33720705/3811484" target="_blank" rel="noopener">https://stackoverflow.com/a/33720705/3811484</a></li>
+    </ul>
+
+    <hr>
+    <!------------------------------------------------------------------------>
+
+</body>
+<html>
